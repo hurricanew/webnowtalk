@@ -12,7 +12,7 @@ script:
   - npm run test
 after_success:
   - npm run build
-  - npm run lh -- https://hurricanew.github.io/build/index.html
+  - npm run lh -- https://hurricanew.github.io/index.html
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
