@@ -22,7 +22,7 @@ env:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: 1fe0bce8162392e35ea22863283cd8a46e538715
+  github-token: f70b0540e04f65c7b6568b6c3921db4e3e7fa192
   keep-history: true
   on:
     branch: develop
