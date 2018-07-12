@@ -22,7 +22,7 @@ env:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: 1e111d1e4476f8482188db7edc3c59e90ddcf9b7  # Set in the settings page of your repository, as a secure variable
+  github-token: 5419512c341deacc95b78cbcd77f2b11e826f753
   keep-history: true
   on:
     branch: develop
