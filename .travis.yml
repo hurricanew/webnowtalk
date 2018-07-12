@@ -19,3 +19,12 @@ branches:
 env:
   - LIGHTHOUSE_API_KEY=a1823785d85540d7ad9143f2a558d346
 
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: 1e111d1e4476f8482188db7edc3c59e90ddcf9b7  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: develop
+
+
