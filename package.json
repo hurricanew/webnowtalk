@@ -20,7 +20,7 @@
     "deploy": "gh-pages-deploy"
   },
   "devDependencies": {
-    "gh-pages-deploy": "0.5.0",
+    "gh-pages-deploy": "0.4.2",
     "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git"
   }
 }
