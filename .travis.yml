@@ -13,6 +13,7 @@ script:
 after_success:
   - npm run build
   - npm run lh -- https://hurricanew.github.io/webnowtalk
+
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
@@ -28,4 +29,5 @@ deploy:
   on:
     branch: develop
 
-
+after_deploy:
+  - npm run lh -- https://hurricanew.github.io/webnowtalk
