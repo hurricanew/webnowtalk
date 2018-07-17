@@ -13,6 +13,7 @@ script:
 after_success:
   - npm run build
   - npm run deploy
+  - npm run lh -- https://hurricanew.github.io/webnowtalk
 
 branches:
   except:
@@ -20,14 +21,3 @@ branches:
 env:
   - LIGHTHOUSE_API_KEY=a1823785d85540d7ad9143f2a558d346
 
-deploy:
-  provider: pages
-  skip-cleanup: true
-  local_dir: build/
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    branch: develop
-
-after_deploy:
-  - npm run lh -- https://hurricanew.github.io/webnowtalk
