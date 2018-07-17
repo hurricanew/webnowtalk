@@ -9,7 +9,8 @@
   "dependencies": {
     "react": "16.4.1",
     "react-dom": "16.4.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "shelljs": "0.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
