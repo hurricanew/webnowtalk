@@ -18,6 +18,5 @@ after_success:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
-env:
-  - LIGHTHOUSE_API_KEY=a1823785d85540d7ad9143f2a558d346
+
 
