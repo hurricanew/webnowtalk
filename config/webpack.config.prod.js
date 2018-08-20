@@ -13,7 +13,7 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
-
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -330,7 +330,12 @@ module.exports = {
     // solution that requires the user to opt into importing specific locales.
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new ImageminPlugin({
+        test: '[/\\.jpe?g$/]',
+        minFileSize: 10000, // Only apply this one to files over 10kb
+        jpegtran: { progressive: true }
+    })
 
   ],
   // Some libraries import Node modules but don't use them in the browser.

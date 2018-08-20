@@ -20,10 +20,10 @@ class SectionCarousel extends React.Component {
         const settings = {
             dots: true,
             infinite: true,
-            speed: 500,
+            speed: 5000,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true
+            autoplay: false
         };
         return (
             <GridContainer>
@@ -32,7 +32,7 @@ class SectionCarousel extends React.Component {
                         <Carousel {...settings}>
                             <div>
                                 <img
-                                    src={image1}
+                                    src={image3}
                                     alt="First slide"
                                     className="slick-image"
                                 />
@@ -58,7 +58,7 @@ class SectionCarousel extends React.Component {
                             </div>
                             <div>
                                 <img
-                                    src={image3}
+                                    src={image1}
                                     alt="Third slide"
                                     className="slick-image"
                                 />
