@@ -11,16 +11,16 @@ import GridContainer from "../components/Grid/GridContainer.jsx";
 import GridItem from "../components/Grid/GridItem.jsx";
 import Card from "../components/Card/Card.jsx";
 
-import image1 from "../assets/img/bg.jpg";
-import image2 from "../assets/img/bg2.jpg";
-import image3 from "../assets/img/bg3.jpg";
+import image1 from "../assets/img/bg4.jpg";
+import image2 from "../assets/img/bg5.jpg";
+import image3 from "../assets/img/bg6.jpg";
 
 class SectionCarousel extends React.Component {
     render() {
         const settings = {
             dots: true,
             infinite: true,
-            speed: 5000,
+            speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false

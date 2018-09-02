@@ -12,6 +12,11 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const WebPWebpackPlugin = require('webp-webpack-plugin/dist').default;
+const imageminMozjpeg = require ('imagemin-mozjpeg');
+// import imageminMozjpeg from 'imagemin-mozjpeg'
+
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 const publicPath = '/';
@@ -243,6 +248,16 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new ImageminPlugin({
+          test: '[/\\.jpe?g$/]',
+          minFileSize: 10000, // Only apply this one to files over 10kb
+          plugins: [
+              imageminMozjpeg({
+                  quality: 80,
+                  progressive: false
+              })
+          ]
+      })
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.

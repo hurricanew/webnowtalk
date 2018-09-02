@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'lazysizes/lazysizes.min';
 import logo from './logo.svg';
 import './App.css';
 import SectionCarousel from './gallery';
