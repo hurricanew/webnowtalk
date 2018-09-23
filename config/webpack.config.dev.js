@@ -15,6 +15,7 @@ const paths = require('./paths');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const WebPWebpackPlugin = require('webp-webpack-plugin/dist').default;
 const imageminMozjpeg = require ('imagemin-mozjpeg');
+const imageminGuetzli = require('imagemin-guetzli');
 // import imageminMozjpeg from 'imagemin-mozjpeg'
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -235,7 +236,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     // Watcher doesn't work well if you mistype casing in a path so we use
     // a plugin that prints an error when you attempt to do this.
-    // See https://github.com/facebookincubator/create-react-app/issues/240
+    // See https://github.com/facebookincubator/create-react-app/issues/240±±±
     new CaseSensitivePathsPlugin(),
     // If you require a missing module and then `npm install` it, you still have
     // to restart the development server for Webpack to discover it. This plugin
@@ -253,8 +254,8 @@ module.exports = {
           minFileSize: 10000, // Only apply this one to files over 10kb
           plugins: [
               imageminMozjpeg({
-                  quality: 80,
-                  progressive: false
+                  quality: 100,
+                  progressive: true
               })
           ]
       })
